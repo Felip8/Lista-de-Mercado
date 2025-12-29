@@ -1,6 +1,9 @@
 import React from "react";
 
-const itemLista = () => {
+const itemLista = ({ itemLista }) => {
+  {
+    console.log(itemLista);
+  }
   return (
     <div>
       <li>

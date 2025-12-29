@@ -9,8 +9,8 @@ function App() {
       <button>Adicionar</button>
 
       <ul>
-        {listaMercado.map((itemLista) => (
-          <ItemLista />
+        {listaMercado.map((itemLista, index) => (
+          <ItemLista key={index} itemLista={itemLista} />
         ))}
       </ul>
     </>
