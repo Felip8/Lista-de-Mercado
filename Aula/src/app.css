@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10vh;
+}
+
+.input-button {
+  display: flex;
+  align-items: center;
+  gap: 2vh; /* espaço entre input e botão */
+  margin: 2vh 2vh 2vh 0vh;
+}
+
+input {
+  border: 0.3vh solid black;
+  border-radius: 1vh;
+  width: 40vh;
+  height: 5vh;
+  padding-left: 2vh;
+}
+
+.botao-adicionar {
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 1vh;
+  height: 5vh;
+  padding: 0 3vh;
+  cursor: pointer;
+}

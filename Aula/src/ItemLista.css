@@ -1,0 +1,25 @@
+/* cada linha */
+.item-linha {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 2vh;
+  margin-bottom: 1vh;
+}
+
+/* texto do item */
+.item-texto {
+  margin: 0;
+  padding-right: 29vh; /* alinha com input */
+}
+
+/* botão remover */
+.botao-remover {
+  background-color: rgb(175, 0, 0);
+  color: white;
+  border: none;
+  border-radius: 1vh;
+  height: 4vh;
+  padding: 0 3vh;
+  cursor: pointer;
+}
