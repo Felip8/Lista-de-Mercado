@@ -73,6 +73,7 @@ import React from "react";
 
 const itemLista = () => {
 return (
+
 <div>
 <li>
 <p>Produto 1</p>
@@ -91,3 +92,21 @@ Aqui ele está sem anda dentro dos () da função. É nesse campo que colocaremo
 ))}
 
 Por quê dessa forma? Porque os props também são objetos
+
+Para fins de teste, vamos usar o console.log para printar a palavra itemLista, nosso parâmetro e ver o que ele retorna:
+
+![alt text](image-2.png)
+
+![alt text](image-3.png)
+
+Aqui ele me retornou todos os itens do meu array
+Lembrando que ele sempre vai duplicar por causa do <StrictMode> lá no main.jsx
+
+Mas o que quer dizer esses prints do console?
+Quer dizer que meus props são objetos que tem uma única chave. Um itemLista que retorna um valorque está dentro do array.
+
+Posso também informar os valores diretamente, sem o texto "itemLista:" usando o seguinte código:
+console.log(itemLista.itemLista);
+
+e se aplicarmos o coneito de desestruturação de código, podemos fazer da seguinte maneira:
+![alt text](image-4.png)

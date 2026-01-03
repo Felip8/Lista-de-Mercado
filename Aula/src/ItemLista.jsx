@@ -1,17 +1,21 @@
-import React from "react";
+const ItemLista = ({ itemLista, listaMercado, setListaMercado }) => {
+  const removerItemDaLista = () => {
+    const novaLista = [...listaMercado];
+    const novaListaFiltrada = novaLista.filter(
+      (itemAtual) => itemAtual !== itemLista
+    );
 
-const itemLista = ({ itemLista }) => {
-  {
-    console.log(itemLista);
-  }
+    setListaMercado(novaListaFiltrada);
+  };
+
   return (
     <div>
       <li>
-        <p>Produto 1</p>
-        <button>Remover</button>
+        <p>{itemLista}</p>
+        <button onClick={() => removerItemDaLista()}>Remover</button>
       </li>
     </div>
   );
 };
 
-export default itemLista;
+export default ItemLista;
