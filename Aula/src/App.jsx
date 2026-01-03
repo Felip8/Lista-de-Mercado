@@ -1,27 +1,30 @@
-import ItemLista from "./ItemLista";
 import { useRef, useState } from "react";
+import ItemLista from "./ItemLista";
 
 function App() {
-  // const listaMercado = ["Banana", "Maça", "Carne"];
   const [listaMercado, setListaMercado] = useState([]);
 
-  const inputAdicionar = useRef();
+  const adicionarValorAoInput = useRef();
 
-  const adicionarElementoNaLista = () => {
-    const novaLista = [...listaMercado];
-    const valorInput = inputAdicionar.current.value;
+  const adicionarItemAoClicar = () => {
+    const novalista = [...listaMercado];
+    const valorInput = adicionarValorAoInput.current.value;
     if (valorInput) {
-      novaLista.push(valorInput);
-      setListaMercado(novaLista);
-      inputAdicionar.current.value = "";
+      novalista.push(valorInput);
+      setListaMercado(novalista);
+      adicionarValorAoInput.current.value = "";
     }
   };
 
   return (
     <>
       <h1>Lista de mercado</h1>
-      <input ref={inputAdicionar} type="text" placeholder="Digite um item" />
-      <button onClick={() => adicionarElementoNaLista()}>Adicionar</button>
+      <input
+        ref={adicionarValorAoInput}
+        type="text"
+        placeholder="Digite um item"
+      />
+      <button onClick={() => adicionarItemAoClicar()}>Adicionar</button>
 
       {listaMercado.length > 0 ? (
         <ul>

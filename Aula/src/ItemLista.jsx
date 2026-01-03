@@ -4,7 +4,6 @@ const ItemLista = ({ itemLista, listaMercado, setListaMercado }) => {
     const novaListaFiltrada = novaLista.filter(
       (itemAtual) => itemAtual !== itemLista
     );
-
     setListaMercado(novaListaFiltrada);
   };
 
