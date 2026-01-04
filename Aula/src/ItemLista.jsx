@@ -1,4 +1,4 @@
-import "./ItemLista.css";
+// import "./ItemLista.css";
 
 const ItemLista = ({ itemLista, listaMercado, setListaMercado }) => {
   const removerItemDaLista = () => {
@@ -6,9 +6,12 @@ const ItemLista = ({ itemLista, listaMercado, setListaMercado }) => {
   };
 
   return (
-    <li className="item-linha">
+    <li className="flex justify-between gap-2">
       <p className="item-texto">{itemLista}</p>
-      <button className="botao-remover" onClick={removerItemDaLista}>
+      <button
+        className="cursor-pointer rounded-md bg-red-800 px-2 text-white transition hover:bg-red-600"
+        onClick={removerItemDaLista}
+      >
         Remover
       </button>
     </li>
